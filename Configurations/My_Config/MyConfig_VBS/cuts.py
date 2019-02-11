@@ -9,8 +9,8 @@ supercut = 'abs(std_vector_lepton_eta[1])<5 && abs(std_vector_lepton_eta[0])<5 \
             && detajj>2.5 \
             '
 
-#cuts['VBS_13TeV_NoLepSel'] = '1'
-cuts['VBS_13TeV_SameSign'] = '((std_vector_lepton_flavour[0] * std_vector_lepton_flavour[1] == 11*11) || (std_vector_lepton_flavour[0] * std_vector_lepton_flavour[1] == 13*13) || (std_vector_lepton_flavour[0] * std_vector_lepton_flavour[1] == 11*13))'
+cuts['VBS_13TeV_NoLepSel'] = '1'
+#cuts['VBS_13TeV_SameSign'] = '((std_vector_lepton_flavour[0] * std_vector_lepton_flavour[1] == 11*11) || (std_vector_lepton_flavour[0] * std_vector_lepton_flavour[1] == 13*13) || (std_vector_lepton_flavour[0] * std_vector_lepton_flavour[1] == 11*13))'
 #cuts['VBS_13TeV_SameSignMM'] = '((std_vector_lepton_flavour[0] * std_vector_lepton_flavour[1] == 13*13))'
 
 # tauVeto = ' \
