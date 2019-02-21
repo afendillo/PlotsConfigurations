@@ -56,8 +56,8 @@ bAlgo='cmvav2'
 #bAlgo='csvv2ivf'
 #bAlgo='DeepCSVB'
 
-bWP='L'
-#bWP='M'
+#bWP='L'
+bWP='M'
 #bWP='T'
 
 # ... bPog SF and b veto
@@ -155,28 +155,33 @@ mixDYttandHT = False  # be carefull DY HT is LO (HT better stat for HT>450 GEV)
 ptllDYW_NLO = '(0.876979+gen_ptll*(4.11598e-03)-(2.35520e-05)*gen_ptll*gen_ptll)*(1.10211 * (0.958512 - 0.131835*TMath::Erf((gen_ptll-14.1972)/10.1525)))*(gen_ptll<140)+0.891188*(gen_ptll>=140)'
 ptllDYW_LO  = '(8.61313e-01+gen_ptll*4.46807e-03-1.52324e-05*gen_ptll*gen_ptll)*(1.08683 * (0.95 - 0.0657370*TMath::Erf((gen_ptll-11.)/5.51582)))*(gen_ptll<140)+1.141996*(gen_ptll>=140)'
 
-samples['ChMislid'] = {    'name'   :getSampleFiles(directory,'DYJetsToLL_M-10to50')
+samples['ChMisId'] = {    'name'   :getSampleFiles(directory,'DYJetsToLL_M-10to50')
                                     +getSampleFiles(directory,'DYJetsToLL_M-50')    
 				                            ,
                      'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,
                      'FilesPerJob' : 2 ,
                  }
-addSampleWeight(samples,'ChMislid','DYJetsToLL_M-10to50',ptllDYW_NLO)
-addSampleWeight(samples,'ChMislid','DYJetsToLL_M-50'     ,ptllDYW_NLO)
+addSampleWeight(samples,'ChMisId','DYJetsToLL_M-10to50',ptllDYW_NLO)
+addSampleWeight(samples,'ChMisId','DYJetsToLL_M-50'     ,ptllDYW_NLO)
 
 
 ###### TopAntiTop#######
 Top_pTrw = '(TMath::Sqrt( TMath::Exp(0.0615-0.0005*topLHEpt) * TMath::Exp(0.0615-0.0005*antitopLHEpt) ) )'
 
-samples['non-prompt'] = {   'name'  :getSampleFiles(directory,'TTTo2L2Nu') 
-                                    +getSampleFiles(directory,'WJetsToLNu')
+samples['ttbar'] = {   'name'  :getSampleFiles(directory,'TTTo2L2Nu') 
                                     ,
                       'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,  
                       'FilesPerJob' : 1 ,
                   }
                   
-addSampleWeight(samples,'non-prompt','TTTo2L2Nu',Top_pTrw)
+addSampleWeight(samples,'ttbar','TTTo2L2Nu',Top_pTrw)
 
+
+samples['Wjets'] = {   'name'  :getSampleFiles(directory,'WJetsToLNu')
+                                    ,
+                      'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC ,  
+                      'FilesPerJob' : 1 ,
+                  }
 ######## Vgamma ########
 
 samples['Vg']  =  {     'name'  :getSampleFiles(directory,'Wg_MADGRAPHMLM')

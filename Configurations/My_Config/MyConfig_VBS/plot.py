@@ -12,7 +12,7 @@ groupPlot['non-prompt']  = {
                   'nameHR' : 't#bar{t} and WJ',
                   'isSignal' : 0,
                   'color': 400,   # kYellow
-                  'samples'  : ['non-prompt']
+                  'samples'  : ['ttbar' , 'Wjets']
               }
 
 groupPlot['Fake']  = {  
@@ -23,11 +23,11 @@ groupPlot['Fake']  = {
               }
 
 
-groupPlot['ChMislid']  = {  
-                  'nameHR' : "ChMislid",
+groupPlot['ChMisId']  = {  
+                  'nameHR' : "ChMisId",
                   'isSignal' : 0,
                   'color': 418,    # kGreen+2
-                  'samples'  : ['ChMislid']
+                  'samples'  : ['ChMisId']
               }
 
 
@@ -53,12 +53,26 @@ groupPlot['Vg']  = {
                   'samples'  : ['Vg']
               }
 
+groupPlot['WW_EWK']  = {  
+                  'nameHR' : "WW_EWK",
+                  'isSignal' : 1,
+                  'color'    : 651,   # kViolet + 1  
+                  'samples'  : ['WW_EWK']
+              }
+
+groupPlot['WW_strong']  = {  
+                  'nameHR' : "WW QCD",
+                  'isSignal' : 0,
+                  'color'    : 633,   # kOrange + 10
+                  'samples'  : ['WW_strong']
+              }
+
 
 #plot = {}
 
 # keys here must match keys in samples.py    
 #                    
-plot['ChMislid']  = {  
+plot['ChMisId']  = {  
                   'color': 418,    # kGreen+2
                   'isSignal' : 0,
                   'isData'   : 0, 
@@ -103,14 +117,20 @@ plot['Fake_mm']  = {
                   'scale'    : 1.0
               }
               
-plot['non-prompt'] = {   
-                  'nameHR' : 't#bar{t} and W+Jets',
+plot['ttbar'] = {   
+                  'nameHR' : 't#bar{t}',
                   'color': 400,   # kYellow
                   'isSignal' : 0,
                   'isData'   : 0, 
                   'scale'    : 1.0
                   }
-
+plot['Wjets'] = {   
+                  'nameHR' : 'W+Jets',
+                  'color': 400,   # kYellow
+                  'isSignal' : 0,
+                  'isData'   : 0, 
+                  'scale'    : 1.0
+                  }
 
 # plot['WW']  = {
 #                   'color': 851, # kAzure -9 
@@ -120,14 +140,14 @@ plot['non-prompt'] = {
 #                   }
 
 plot['WW_EWK']  = {
-                  'color': 615, # kAzure -9 
-                  'isSignal' : 0,
+                  'color': 651, # kAzure -9 
+                  'isSignal' : 1,
                   'isData'   : 0,
                   'scale'    : 1.0   # ele/mu trigger efficiency   datadriven
                   }
 
 plot['WW_strong']  = {
-                  'color': 621, # kAzure -9 
+                  'color': 633, # kAzure -9 
                   'isSignal' : 0,
                   'isData'   : 0,
                   'scale'    : 1.0   # ele/mu trigger efficiency   datadriven

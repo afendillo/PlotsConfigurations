@@ -6,12 +6,17 @@
 #                    
 
 ## Reducible Bkg
-structure['ChMislid']  = {  
+structure['ChMisId']  = {  
                   'isSignal' : 0,
                   'isData'   : 0
               }
 
-structure['non-prompt'] = {   
+structure['ttbar'] = {   
+                  'isSignal' : 0,
+                  'isData'   : 0 
+                  }
+
+structure['Wjets'] = {   
                   'isSignal' : 0,
                   'isData'   : 0 
                   }
