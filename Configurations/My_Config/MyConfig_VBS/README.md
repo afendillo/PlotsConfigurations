@@ -28,10 +28,6 @@ After all your jobs are finished, and before going to the next step, check the .
     
 If you find .jid files it means that the corresponding jobs failed, check the .err and .out files to understand the reason of the failure.
 
-If a job takes too long / fails, one can kill it and resubmit manually, e.g.:
-'''
-   sed -i "s/espresso/microcentury/g" espresso $CMSSW_DIRECTORY/jobs/mkShapes__VBS_SS_test/......
-'''
 If several jobs failed and you want to resubmit them all at once you can do:
 
     cd $CMSSW_DIRECTORY/jobs/mkShapes__VBS_SS_test
