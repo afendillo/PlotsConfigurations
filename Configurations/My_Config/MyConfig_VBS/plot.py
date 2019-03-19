@@ -12,7 +12,7 @@ groupPlot['non-prompt']  = {
                   'nameHR' : 't#bar{t} and WJ',
                   'isSignal' : 0,
                   'color': 400,   # kYellow
-                  'samples'  : ['ttbar' , 'Wjets']
+                  'samples'  : ['Wjets']
               }
 
 groupPlot['Fake']  = {  
@@ -23,11 +23,11 @@ groupPlot['Fake']  = {
               }
 
 
-groupPlot['ChMisId']  = {  
+groupPlot['ChargeMisId']  = {  
                   'nameHR' : "ChMisId",
                   'isSignal' : 0,
                   'color': 418,    # kGreen+2
-                  'samples'  : ['ChMisId']
+                  'samples'  : ['ChMisId' ,'ttbar']
               }
 
 
@@ -118,8 +118,7 @@ plot['Fake_mm']  = {
               }
               
 plot['ttbar'] = {   
-                  'nameHR' : 't#bar{t}',
-                  'color': 400,   # kYellow
+                  'color': 418,   # kYellow
                   'isSignal' : 0,
                   'isData'   : 0, 
                   'scale'    : 1.0
